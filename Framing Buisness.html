@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Custom Framing - Expert Construction Framing Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #B83A3A;
+            --deep-red: #8B2828;
+            --rich-brown: #5C4033;
+            --warm-brown: #8B6F47;
+            --light-tan: #D4C4B0;
+            --off-white: #F5F1EC;
+            --dark-charcoal: #2A2622;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--dark-charcoal);
+            background: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(42, 38, 34, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--rich-brown);
+        }
+
+        .logo span {
+            color:var(--primary-red)
+
+
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            height: 90vh;
+            background: linear-gradient(135deg, rgba(92, 64, 51, 0.9), rgba(184, 58, 58, 0.7)),
+                        url('https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.03) 2px,
+                rgba(0,0,0,0.03) 4px
+            );
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-logo img {
+            max-width: 250px;
+            max-height: 250px;
+            width: auto;
+            height: auto;
+            filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        .company-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: white;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 3px solid var(--primary-red);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-red), var(--warm-brown), var(--primary-red));
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--dark-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--rich-brown);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--off-white);
+            padding: 2.5rem;
+            border-left: 5px solid var(--primary-red);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(184, 58, 58, 0.05), transparent);
+            transition: width 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            width: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 10px 30px rgba(92, 64, 51, 0.15);
+        }
+
+        .service-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--deep-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-card p {
+            color: var(--rich-brown);
+            line-height: 1.8;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 6rem 2rem;
+            background: var(--light-tan);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            border: 4px solid var(--rich-brown);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(92, 64, 51, 0.95), transparent);
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay h3 {
+            font-family: 'Oswald', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .portfolio-overlay p {
+            color: var(--light-tan);
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            color: var(--deep-red);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--rich-brown);
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: var(--off-white);
+            padding: 2rem;
+            border-top: 4px solid var(--primary-red);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--rich-brown);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--rich-brown), var(--dark-charcoal));
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--light-tan);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 1rem;
+            border: 2px solid var(--warm-brown);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--light-tan);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            padding: 1.2rem 3rem;
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid var(--primary-red);
+        }
+
+        .submit-btn:hover {
+            background: transparent;
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            color: var(--light-tan);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-charcoal);
+            color: var(--light-tan);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid var(--primary-red);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-logo img {
+                max-width: 180px;
+                max-height: 180px;
+            }
+
+            .company-name {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 1rem;
+                margin: 10% auto;
+            }
+
+            .modal-text h3 {
+                font-size: 1.8rem;
+            }
+
+            .modal-text p {
+                font-size: 1rem;
+            }
+
+            .close-modal {
+                font-size: 2.5rem;
+                right: 1rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        /* Modal for expandable images */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            overflow: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 2% auto;
+            padding: 2rem;
+            max-width: 1200px;
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content img {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border: 5px solid var(--primary-red);
+            margin-bottom: 2rem;
+        }
+
+        .modal-text {
+            background: rgba(92, 64, 51, 0.9);
+            padding: 2rem;
+            border-left: 5px solid var(--primary-red);
+        }
+
+        .modal-text h3 {
+            font-family: 'Oswald', sans-serif;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .modal-text p {
+            color: var(--light-tan);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 2001;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-red);
+        }
+
+        /* Add click indicator to portfolio items */
+        .portfolio-item::after {
+            content: 'Click to expand';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Genaral<span style="color: var(--off-white)">Custom</span><span>FRAMING</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <!-- REPLACE 'logo-placeholder.png' WITH YOUR ACTUAL LOGO FILE NAME -->
+                <img src="logo-placeholder.png" alt="Company Logo" id="companyLogo">
+            </div>
+            <h2 class="company-name">General Custom Framing</h2>
+            <h1>Building Foundations That Last</h1>
+            <p>Expert construction framing services with precision, quality, and reliability on every project</p>
+            <a href="#contact" class="cta-button">Get A Free Quote</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive framing solutions tailored to residential and commercial projects of all sizes</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Framing</h3>
+                    <p>From single-family homes to multi-unit developments, we provide expert residential framing that meets building codes and exceeds quality standards. Our team ensures structural integrity and precision on every project.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Commercial Framing</h3>
+                    <p>We handle commercial framing projects with efficiency and expertise. Whether it's retail spaces, office buildings, or industrial facilities, we deliver on time and on budget without compromising quality.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Timber & Steel Framing</h3>
+                    <p>Specializing in both traditional timber framing and modern steel construction, we adapt our methods to suit your project's specific requirements, ensuring optimal strength and durability.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Roof Framing</h3>
+                    <p>Expert roof framing including trusses, rafters, and custom configurations. We work with complex designs and ensure proper structural support for long-lasting protection.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Floor Systems</h3>
+                    <p>Professional floor framing and joist installation for all building types. We ensure level, stable floors that provide the foundation for quality finishes and long-term reliability.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Remodels & Additions</h3>
+                    <p>Seamlessly integrate new construction with existing structures. Our experienced team handles complex remodel framing and additions with attention to matching materials and maintaining structural integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">Recent projects showcasing our commitment to excellence and craftsmanship</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" onclick="openModal('modal1')">
+                    <img src="https://dlqxt4mfnxo6k.cloudfront.net/capitalhomes.com/aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2J1aWxkZXJjbG91ZC80YzZmYzNkYTRmYjVmN2RkOTRmYTgyMjExY2JhMzBkYi5qcGVn/webp/800/800" alt="Residential Framing" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%235C4033%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23F5F1EC%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EResidential Framing%3C/text%3E%3C/svg%3E'">
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Home Build</h3>
+                        <p>4,500 sq ft custom residential framing with complex roof lines and cathedral ceilings</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="openModal('modal2')">
+                    <img src="https://www.parealtors.org/wp-content/uploads/2024/06/9.1-Wood-House.jpg" alt="Commercial Framing" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%235C4033%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23F5F1EC%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3ECommercial Framing%3C/text%3E%3C/svg%3E'">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial Complex</h3>
+                        <p>Multi-story steel framing for retail and office space development</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="openModal('modal3')">
+                    <img src="https://redwoodhomes.ca/wp-content/uploads/2015/11/iStock_000001519880_Small.jpg" alt="Home Renovation" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%235C4033%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23F5F1EC%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EHome Renovation%3C/text%3E%3C/svg%3E'">
+                    <div class="portfolio-overlay">
+                        <h3>Historic Renovation</h3>
+                        <p>Careful restoration and framing addition maintaining architectural integrity</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="openModal('modal4')">
+                    <img src="data:image/jpeg;base64,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" alt="Multi-family Construction" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%235C4033%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23F5F1EC%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EMulti-family Construction%3C/text%3E%3C/svg%3E'">
+                    <div class="portfolio-overlay">
+                        <h3>Multi-Family Development</h3>
+                        <p>12-unit townhome complex with efficient framing systems</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="openModal('modal5')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn6nkfXvvv5jz0rgiAqxzu1Sh5JyAOWo2lOQ&s" alt="Warehouse Construction" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%235C4033%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23F5F1EC%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EWarehouse Construction%3C/text%3E%3C/svg%3E'">
+                    <div class="portfolio-overlay">
+                        <h3>Industrial Warehouse</h3>
+                        <p>Heavy-duty steel framing for 25,000 sq ft warehouse facility</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" onclick="openModal('modal6')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSTCF34-UvbF6BFSVA2aAF6hxJ82Et6v8JhQ&s" alt="Timber Frame Home" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect fill=%22%235C4033%22 width=%22800%22 height=%22600%22/%3E%3Ctext fill=%22%23F5F1EC%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3ETimber Frame Home%3C/text%3E%3C/svg%3E'">
+                    <div class="portfolio-overlay">
+                        <h3>Mountain Retreat</h3>
+                        <p>Custom timber framing for vacation home with exposed beam details</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Us</h2>
+                    <p>With over 15 years of experience in construction framing, Precision Framing Co. has built a reputation for excellence, reliability, and superior craftsmanship. We understand that the framing is the backbone of any structure, which is why we never cut corners.</p>
+                    <p>Our team of skilled professionals uses the latest techniques and adheres to all building codes and safety standards. We pride ourselves on clear communication, timely completion, and building lasting relationships with our clients.</p>
+                    <p>From initial consultation to project completion, we're committed to delivering framing work that stands the test of time.</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-box">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Quality Guaranteed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your project? Contact us today for a free consultation and quote</p>
+                
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your interest! This is a demo form. In a live website, this would send your message.');">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Project Type">
+                    </div>
+                    <textarea placeholder="Tell us about your project..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>info@precisionframing.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <p>Cleburne, Texas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Precision Framing Co. All rights reserved. | Licensed & Insured</p>
+    </footer>
+
+    <!-- Modals for Portfolio Items -->
+    <div id="modal1" class="modal" onclick="closeModal('modal1')">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1600" alt="Residential Framing">
+            <div class="modal-text">
+                <h3>Luxury Home Build</h3>
+                <p>This stunning 4,500 square foot custom residential project showcased our expertise in complex architectural framing. The design featured intricate roof lines with multiple valleys and peaks, along with soaring cathedral ceilings throughout the main living spaces. Our team worked closely with the architect to ensure every structural element was perfectly executed, from the engineered headers supporting the wide-span openings to the custom truss system that creates the dramatic ceiling heights. The project required precise measurements and advanced framing techniques to achieve the homeowner's vision while maintaining structural integrity.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal" onclick="closeModal('modal2')">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="https://images.unsplash.com/photo-1597476373635-fa4c4c2a6562?w=1600" alt="Commercial Framing">
+            <div class="modal-text">
+                <h3>Commercial Complex</h3>
+                <p>This multi-story commercial development required advanced steel framing techniques and strict adherence to commercial building codes. The project combined retail space on the ground floor with professional office suites on the upper levels. We utilized structural steel framing throughout, including I-beams and columns rated for heavy commercial loads. The project was completed on an aggressive timeline, coordinating with multiple trades and managing logistics in an active urban area. Our team's efficiency and attention to detail ensured the project stayed on schedule without compromising quality or safety standards.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal" onclick="closeModal('modal3')">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600" alt="Home Renovation">
+            <div class="modal-text">
+                <h3>Historic Renovation</h3>
+                <p>This sensitive renovation project required us to blend new construction with the existing historic structure seamlessly. We carefully assessed the original timber framing, reinforcing where necessary while preserving the building's architectural character. The addition incorporated modern building techniques while using materials and methods that complemented the original construction. Special attention was paid to matching timber dimensions, replicating traditional joinery details, and ensuring the new framing integrated invisibly with the historic elements. This project demonstrated our ability to respect architectural heritage while meeting current building codes and structural requirements.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal" onclick="closeModal('modal4')">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600" alt="Multi-family Construction">
+            <div class="modal-text">
+                <h3>Multi-Family Development</h3>
+                <p>This 12-unit townhome complex showcased our ability to execute repetitive framing with precision and efficiency. Each unit featured identical floor plans, allowing us to develop a systematic approach that maximized quality while minimizing construction time. We implemented advanced framing techniques including optimized stud spacing and engineered lumber where appropriate to reduce material waste and improve energy efficiency. The project required careful coordination of utilities and fire-rated assemblies between units. Our experienced crew completed the framing phase ahead of schedule, demonstrating the value of systematic planning and skilled execution in multi-family construction.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal" onclick="closeModal('modal5')">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1600" alt="Warehouse Construction">
+            <div class="modal-text">
+                <h3>Industrial Warehouse</h3>
+                <p>This 25,000 square foot warehouse facility required heavy-duty structural steel framing designed to support significant roof loads and potential future equipment installations. We installed wide-flange steel beams spanning up to 60 feet, creating a column-free interior space that maximizes usable floor area. The project included specialized framing for overhead crane support, reinforced loading dock areas, and provisions for future mezzanine expansion. All work was performed to exacting tolerances, ensuring proper alignment for the eventual installation of roof panels and exterior cladding. This project highlighted our capabilities in large-scale commercial and industrial construction.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal" onclick="closeModal('modal6')">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600" alt="Timber Frame Home">
+            <div class="modal-text">
+                <h3>Mountain Retreat</h3>
+                <p>This custom mountain vacation home featured exposed timber framing as a key architectural element. We hand-selected premium Douglas fir timbers and employed traditional mortise-and-tenon joinery techniques to create dramatic exposed trusses and posts throughout the great room. The project combined heavy timber construction with conventional framing in a way that highlighted the natural beauty of the wood while meeting all structural requirements. Each timber was carefully milled, fitted, and finished to showcase the natural grain and character of the wood. The result is a warm, inviting space that celebrates traditional craftsmanship while incorporating modern building science for energy efficiency and durability.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
